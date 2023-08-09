@@ -21,7 +21,9 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
 
-      - name: Build with Maven
+      - name: Set executable permissions for mvnw
+        run: chmod +x mvnw
+      - name: Build and Verify
         run: ./mvnw verify
 
       - if: ${{ github.ref == 'refs/heads/main' }}
