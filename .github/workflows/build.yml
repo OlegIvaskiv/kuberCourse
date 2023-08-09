@@ -1,9 +1,7 @@
 name: Build
-
 on:
   push:
     branches: [ "**" ]
-
 jobs:
   build-bookmarker-api:
     name: Build bookmarker-api
